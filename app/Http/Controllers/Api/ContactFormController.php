@@ -35,7 +35,7 @@ class ContactFormController extends Controller
             'bodyMessage' => $request->get('message'),
         ), function($message) use ($request){
             $message->from($request->email);
-            $message->to('info@indenta.ai', 'Admin')->subject($request->get('subject'));
+            $message->to('mohammadmuntazir18@gmail.com', 'Admin')->subject($request->get('subject'));
         });
         return response()->json(['success' => 'The email has been sent.']);
     }
